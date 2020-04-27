@@ -12,6 +12,7 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import * as ROUTES from '../../constants/routes';
+import { withAuthentication } from '../Session';
 
 const App = () => (
   <Router>
@@ -29,4 +30,4 @@ const App = () => (
   </Router>
 );
 
-export default App;
+export default withAuthentication(App);
